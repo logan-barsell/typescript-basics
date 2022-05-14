@@ -48,7 +48,7 @@ printAnything<string>(['a', 'b', 'c']);
 
 // Generic contraints
 
-class Car {
+class Cars {
   print() {
     console.log('I am a car');
   }
@@ -71,5 +71,5 @@ function printHousesOrCars<T extends Printable>(arr: T[]): void {
 }
 
 printHousesOrCars<House>([new House(), new House()]);
-printHousesOrCars<Car>([new Car(), new Car()]);
-printHousesOrCars([new House(), new Car()]);
+printHousesOrCars<Cars>([new Cars(), new Cars()]);
+printHousesOrCars([new House(), new Cars()]);
